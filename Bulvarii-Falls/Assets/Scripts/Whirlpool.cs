@@ -21,6 +21,7 @@ public class Whirlpool : MonoBehaviour
         if (collision.tag == "Player")
         {
             Debug.Log("Player is dead");
+            Destroy(collision.gameObject);
         }
     }
 }
