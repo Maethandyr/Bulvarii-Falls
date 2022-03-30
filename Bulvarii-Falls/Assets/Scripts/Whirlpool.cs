@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Whirlpool : MonoBehaviour
 {
+    private Movement playerMovement;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Player Gameobject with script Movement
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>();
     }
 
     // Update is called once per frame
@@ -21,7 +24,7 @@ public class Whirlpool : MonoBehaviour
         if (collision.tag == "Player")
         {
             Debug.Log("Player is dead");
-            Destroy(collision.gameObject);
+            StartCoroutine(playerMovement.WhirlpoolDeathCoroutine());
         }
     }
 }

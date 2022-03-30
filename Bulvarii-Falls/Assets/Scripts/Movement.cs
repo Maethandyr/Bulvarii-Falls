@@ -7,18 +7,20 @@ public class Movement : MonoBehaviour
 {
     public float speed = 8; // players move speed
     public bool facingRight = true; // Facing direction
+    public bool stance = false;
+    public float lerpDuration = 0.5f;
 
     private float horizontalValue;
     private float VerticalValue;
     private Rigidbody2D rb;
-    private Stamina stamina;
     Vector2 movement;
+    float spin;
+    bool rotating;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        stamina = gameObject.GetComponent<Stamina>();
     }
 
     // Update is called once per frame
@@ -27,12 +29,13 @@ public class Movement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         
+
     }
 
     //Helps with the physics of Rigidbody2D
     private void FixedUpdate()
     {
-        if (stamina.stance == false) //Check Stamina script
+        if (stance == false) //Check Stamina script
         {
             rb.AddForce(movement * speed * Time.fixedDeltaTime);
         }
@@ -50,5 +53,29 @@ public class Movement : MonoBehaviour
             facingRight = !facingRight;
             transform.Rotate(new Vector3(0, 180, 0));
         }
+    }
+
+    public void WhirlpoolDeath()
+    {
+        
+    }
+
+    public IEnumerator WhirlpoolDeathCoroutine()
+    {
+        //When player fall into whirlpool and lose
+        Debug.Log("Whirlpool fall");
+
+        rotating = true;
+        float timeElapsed = 0;
+        Quaternion startRotation = transform.rotation;
+        Quaternion targetRotation = transform.rotation * Quaternion.Euler(0, 0, 90);
+        while (timeElapsed < lerpDuration)
+        {
+            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, timeElapsed / lerpDuration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+        transform.rotation = targetRotation;
+        rotating = false;
     }
 }
