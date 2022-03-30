@@ -5,22 +5,30 @@ using UnityEngine;
 //Reference Flip: https://www.youtube.com/watch?v=Cr-j7EoM8bg&ab_channel=DaniKrossing || https://www.youtube.com/watch?v=ccxXxvlS4mI&ab_channel=NickHwang
 public class Movement : MonoBehaviour
 {
-    public float speed = 8; // players move speed
+    public float speed = 800f; // players move speed
+    public float rotationSpeed = 500f;
     public bool facingRight = true; // Facing direction
+    public int deathTimer = 5;
+    [HideInInspector]
     public bool stance = false;
-    public float lerpDuration = 0.5f;
+    [HideInInspector]
+    public bool whirlpoolRotating = false;
 
-    private float horizontalValue;
-    private float VerticalValue;
     private Rigidbody2D rb;
     Vector2 movement;
-    float spin;
-    bool rotating;
+    Vector3 scaleChange;
+
+    private void Awake()
+    {
+        scaleChange = new Vector3(-0.01f, -0.01f, 0f);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        stance = false;
+        whirlpoolRotating = false;
     }
 
     // Update is called once per frame
@@ -28,8 +36,8 @@ public class Movement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        
 
+        WhirlpoolDeath();
     }
 
     //Helps with the physics of Rigidbody2D
@@ -57,25 +65,23 @@ public class Movement : MonoBehaviour
 
     public void WhirlpoolDeath()
     {
-        
+        if (whirlpoolRotating)
+        {
+            transform.Rotate(new Vector3(0f, 0f, rotationSpeed) * Time.deltaTime);
+            if (transform.localScale.x > 0 || transform.localScale.y > 0)
+            {
+                transform.localScale += scaleChange;
+            }
+            StartCoroutine(WhirlpoolDeathCoroutine(deathTimer));
+        }
     }
 
-    public IEnumerator WhirlpoolDeathCoroutine()
+    public IEnumerator WhirlpoolDeathCoroutine(int timer)
     {
         //When player fall into whirlpool and lose
         Debug.Log("Whirlpool fall");
 
-        rotating = true;
-        float timeElapsed = 0;
-        Quaternion startRotation = transform.rotation;
-        Quaternion targetRotation = transform.rotation * Quaternion.Euler(0, 0, 90);
-        while (timeElapsed < lerpDuration)
-        {
-            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, timeElapsed / lerpDuration);
-            timeElapsed += Time.deltaTime;
-            yield return null;
-        }
-        transform.rotation = targetRotation;
-        rotating = false;
+        yield return new WaitForSeconds(timer);
+        Destroy(gameObject);
     }
 }

@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5096872745742225127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 0.3812185}
+  m_LocalScale: {x: 5, y: 5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -147,7 +147,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 800
+  rotationSpeed: 500
   facingRight: 1
+  deathTimer: 5
+  stance: 0
+  whirlpoolRotating: 0
 --- !u!95 &5096872745742225133
 Animator:
   serializedVersion: 3
@@ -180,4 +184,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxStamina: 100
-  stance: 0

@@ -24,7 +24,7 @@ public class Whirlpool : MonoBehaviour
         if (collision.tag == "Player")
         {
             Debug.Log("Player is dead");
-            StartCoroutine(playerMovement.WhirlpoolDeathCoroutine());
+            playerMovement.whirlpoolRotating = true;
         }
     }
 }
