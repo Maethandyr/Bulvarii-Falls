@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
 {
     public float speed = 800f; // players move speed
     public float rotationSpeed = 500f;
+    public float sinkSpeed = 500f;
     public bool facingRight = true; // Facing direction
     public int deathTimer = 5;
     [HideInInspector]
@@ -70,7 +71,7 @@ public class Movement : MonoBehaviour
             transform.Rotate(new Vector3(0f, 0f, rotationSpeed) * Time.deltaTime);
             if (transform.localScale.x > 0 || transform.localScale.y > 0)
             {
-                transform.localScale += scaleChange;
+                transform.localScale += scaleChange * sinkSpeed * Time.deltaTime;
             }
             StartCoroutine(WhirlpoolDeathCoroutine(deathTimer));
         }

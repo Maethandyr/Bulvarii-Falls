@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5096872745742225126, guid: b49d528e6719c17419ccae6af3a87b60, type: 3}
+      propertyPath: sinkSpeed
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096872745742225126, guid: b49d528e6719c17419ccae6af3a87b60, type: 3}
+      propertyPath: deathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096872745742225126, guid: b49d528e6719c17419ccae6af3a87b60, type: 3}
+      propertyPath: rotationSpeed
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 5096872745742225127, guid: b49d528e6719c17419ccae6af3a87b60, type: 3}
       propertyPath: m_Name
       value: Swimmer
@@ -276,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981e9a14d03286b47a099cf16dba0832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1758927260}
 --- !u!1 &1471668383
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +437,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1758927260 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5096872745742225128, guid: b49d528e6719c17419ccae6af3a87b60, type: 3}
+  m_PrefabInstance: {fileID: 132440776}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1869770695
 GameObject:
   m_ObjectHideFlags: 0
