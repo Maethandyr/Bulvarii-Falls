@@ -5,15 +5,15 @@ using UnityEngine;
 public class Stamina : MonoBehaviour
 {
     public float maxStamina = 100;
-    [HideInInspector]
+    public float gainStamina = 10;
     
-
-    private float stamina;
+    private float stamina = 0;
     private Movement playerMovement;
+
     // Start is called before the first frame update
     void Start()
     {
-        stamina = maxStamina;
+        stamina = 0;
         playerMovement = gameObject.GetComponent<Movement>();
     }
 
@@ -21,6 +21,11 @@ public class Stamina : MonoBehaviour
     void Update()
     {
         DragonBreath();
+        if (Input.GetKeyDown("space") && stamina < maxStamina)
+        {
+            stamina += gainStamina;
+            Debug.Log("Stamina: " + stamina);
+        }
     }
 
     private void FixedUpdate()
