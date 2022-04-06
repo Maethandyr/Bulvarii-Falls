@@ -130,17 +130,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5096872745742225126, guid: b49d528e6719c17419ccae6af3a87b60, type: 3}
-      propertyPath: sinkSpeed
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 5096872745742225126, guid: b49d528e6719c17419ccae6af3a87b60, type: 3}
-      propertyPath: deathTimer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5096872745742225126, guid: b49d528e6719c17419ccae6af3a87b60, type: 3}
-      propertyPath: rotationSpeed
-      value: 300
+    - target: {fileID: 1580252175, guid: b49d528e6719c17419ccae6af3a87b60, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5096872745742225127, guid: b49d528e6719c17419ccae6af3a87b60, type: 3}
       propertyPath: m_Name
