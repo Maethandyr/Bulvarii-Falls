@@ -6,8 +6,9 @@ public class Stamina : MonoBehaviour
 {
     public float maxStamina = 100;
     public float gainStamina = 10;
-    
-    private float stamina = 0;
+    public StaminaUI staminaUI;
+    public float stamina = 0;
+
     private Movement playerMovement;
 
     // Start is called before the first frame update
@@ -15,6 +16,7 @@ public class Stamina : MonoBehaviour
     {
         stamina = 0;
         playerMovement = gameObject.GetComponent<Movement>();
+        staminaUI.SetMaxEnergy(maxStamina);
     }
 
     // Update is called once per frame
@@ -24,6 +26,7 @@ public class Stamina : MonoBehaviour
         if (Input.GetKeyDown("space") && stamina < maxStamina)
         {
             stamina += gainStamina;
+            staminaUI.SetEnergy(stamina);
             Debug.Log("Stamina: " + stamina);
         }
     }
@@ -43,13 +46,13 @@ public class Stamina : MonoBehaviour
         }
     }
 
-    IEnumerator StanceCoroutine()
+    public IEnumerator StanceCoroutine()
     {
         playerMovement.stance = true;
         Debug.Log("Movement lock");
 
         //yield on a new YieldInstruction that waits.
-        yield return new WaitUntil(() => Input.GetKeyDown("x"));
+        yield return new WaitUntil(() => stamina >= maxStamina);
 
         playerMovement.stance = false;
         Debug.Log("Movement unlock");

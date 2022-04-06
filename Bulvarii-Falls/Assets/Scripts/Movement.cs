@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
     private Rigidbody2D rb;
     Vector2 movement;
     Vector3 scaleChange;
+    private Stamina stamina;
 
     private void Awake()
     {
@@ -27,6 +28,7 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        stamina = gameObject.GetComponent<Stamina>();
         rb = gameObject.GetComponent<Rigidbody2D>();
         stance = false;
         whirlpoolRotating = false;
@@ -38,7 +40,7 @@ public class Movement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        WhirlpoolDeath();
+        //WhirlpoolDeath();
     }
 
     //Helps with the physics of Rigidbody2D
@@ -73,14 +75,13 @@ public class Movement : MonoBehaviour
             {
                 transform.localScale += scaleChange * sinkSpeed * Time.deltaTime;
             }
-            StartCoroutine(WhirlpoolDeathCoroutine(deathTimer));
         }
     }
 
     public IEnumerator WhirlpoolDeathCoroutine(int timer)
     {
         //When player fall into whirlpool and lose
-        Debug.Log("Whirlpool fall");
+        //Debug.Log("Whirlpool fall");
 
         yield return new WaitForSeconds(timer);
         Destroy(gameObject);

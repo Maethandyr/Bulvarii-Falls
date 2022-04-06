@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5096872745742225129}
   - component: {fileID: 5096872745742225130}
   - component: {fileID: 5096872745742225131}
-  - component: {fileID: 5096872745742225126}
   - component: {fileID: 5096872745742225133}
+  - component: {fileID: 5096872745742225126}
   - component: {fileID: 5096872745742225132}
   m_Layer: 0
   m_Name: Swimmer
@@ -134,24 +134,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5096872745742225126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5096872745742225127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be81a62decb4ba44f87eecd0eaa03f49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 800
-  rotationSpeed: 500
-  facingRight: 1
-  deathTimer: 5
-  stance: 0
-  whirlpoolRotating: 0
 --- !u!95 &5096872745742225133
 Animator:
   serializedVersion: 3
@@ -171,6 +153,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5096872745742225126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5096872745742225127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be81a62decb4ba44f87eecd0eaa03f49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStamina: 100
+  gainStamina: 10
+  staminaUI: {fileID: 0}
+  speed: 800
+  rotationSpeed: 500
+  sinkSpeed: 500
+  facingRight: 1
+  deathTimer: 5
+  stance: 0
+  whirlpoolRotating: 0
 --- !u!114 &5096872745742225132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,3 +188,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxStamina: 100
+  gainStamina: 10
+  staminaUI: {fileID: 0}
