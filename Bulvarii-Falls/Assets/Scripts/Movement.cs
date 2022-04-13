@@ -8,6 +8,8 @@ public class Movement : MonoBehaviour
     public float speed = 800f; // players move speed
     public float rotationSpeed = 500f;
     public float sinkSpeed = 500f;
+    [Range(0.0f, 0.1f)]
+    public float skid = 0.01f;
     public bool facingRight = true; // Facing direction
     [HideInInspector]
     public bool stance = false;
@@ -48,6 +50,7 @@ public class Movement : MonoBehaviour
         if (stance == false) //Check Stamina script
         {
             rb.AddForce(movement * speed * Time.fixedDeltaTime);
+            rb.velocity -= skid * rb.velocity;
         }
         else
         {
