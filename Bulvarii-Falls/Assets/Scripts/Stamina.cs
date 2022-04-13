@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class Stamina : MonoBehaviour
 {
-    public float maxStamina = 100;
-    public float gainStamina = 10;
-    public StaminaUI staminaUI;
+    public float maxStamina = 10;
+    private float loseStamina = 1;
+    [HideInInspector]
     public float stamina = 0;
+    public StaminaUI staminaUI;
 
     private Movement playerMovement;
 
     // Start is called before the first frame update
     void Start()
     {
-        stamina = 0;
+        stamina = maxStamina;
         playerMovement = gameObject.GetComponent<Movement>();
         staminaUI.SetMaxEnergy(maxStamina);
     }
@@ -23,12 +24,7 @@ public class Stamina : MonoBehaviour
     void Update()
     {
         DragonBreath();
-        if (Input.GetKeyDown("space") && stamina < maxStamina)
-        {
-            stamina += gainStamina;
-            staminaUI.SetEnergy(stamina);
-            Debug.Log("Stamina: " + stamina);
-        }
+        staminaUI.SetEnergy(stamina);
     }
 
     private void FixedUpdate()
@@ -41,8 +37,18 @@ public class Stamina : MonoBehaviour
         if (Input.GetKeyDown("f"))
         {
             Debug.Log("Dragon Breath Stance");
-            stamina = 0;
+            stamina = maxStamina;
             StartCoroutine(StanceCoroutine());
+        }
+    }
+
+    private void Test()
+    {
+        if (Input.GetKeyDown("space") && stamina <= maxStamina)
+        {
+            stamina -= loseStamina;
+            staminaUI.SetEnergy(stamina);
+            Debug.Log("Stamina: " + stamina);
         }
     }
 
@@ -52,7 +58,7 @@ public class Stamina : MonoBehaviour
         Debug.Log("Movement lock");
 
         //yield on a new YieldInstruction that waits.
-        yield return new WaitUntil(() => stamina >= maxStamina);
+        yield return new WaitUntil(() => stamina >= 0);
 
         playerMovement.stance = false;
         Debug.Log("Movement unlock");

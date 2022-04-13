@@ -19,7 +19,7 @@ public class StaminaUI : MonoBehaviour
     public void SetMaxEnergy(float energy)
     {
         slider.maxValue = energy;
-        slider.value = 0;
+        slider.value = energy;
         //fill.color = gradient.Evaluate(1f);
     }
 
@@ -27,5 +27,11 @@ public class StaminaUI : MonoBehaviour
     {
         stamina.stamina = energy;
         slider.value = energy;
+    }
+
+    public void LoseEnergy(float energy)
+    {
+        stamina.stamina -= energy;
+        slider.value = stamina.stamina;
     }
 }

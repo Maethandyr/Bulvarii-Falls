@@ -9,7 +9,6 @@ public class Movement : MonoBehaviour
     public float rotationSpeed = 500f;
     public float sinkSpeed = 500f;
     public bool facingRight = true; // Facing direction
-    public int deathTimer = 5;
     [HideInInspector]
     public bool stance = false;
     [HideInInspector]
@@ -76,14 +75,5 @@ public class Movement : MonoBehaviour
                 transform.localScale += scaleChange * sinkSpeed * Time.deltaTime;
             }
         }
-    }
-
-    public IEnumerator WhirlpoolDeathCoroutine(int timer)
-    {
-        //When player fall into whirlpool and lose
-        //Debug.Log("Whirlpool fall");
-
-        yield return new WaitForSeconds(timer);
-        Destroy(gameObject);
     }
 }

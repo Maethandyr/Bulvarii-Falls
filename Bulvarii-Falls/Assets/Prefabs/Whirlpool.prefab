@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2718717738897997493}
   - component: {fileID: 2718717738897997492}
-  - component: {fileID: 2718717738897997482}
+  - component: {fileID: 6853652955887674192}
   - component: {fileID: 2718717738897997483}
   - component: {fileID: 1200253724}
   m_Layer: 0
   m_Name: Whirlpool
-  m_TagString: Untagged
+  m_TagString: Whirlpool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 34a3be33b17f5d2408b236f67278422d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ff249cfa25058c4ea3580b7643b65d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2718717738897997482
-BoxCollider2D:
+--- !u!58 &6853652955887674192
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -99,18 +99,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.77, y: 6.36}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 3}
-  m_EdgeRadius: 0
+  m_Radius: 0.9599999
 --- !u!114 &2718717738897997483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +113,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27840666b7ab7d9499172a5ba84df422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  staminaUI: {fileID: 0}
+  pullSpeed: 1
+  rangeDetection: 15
+  escapeDifficulty: 5
+  deathTimer: 5
+  setOpaque: 0
 --- !u!95 &1200253724
 Animator:
   serializedVersion: 3

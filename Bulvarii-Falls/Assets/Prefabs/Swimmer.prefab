@@ -490,7 +490,7 @@ Transform:
   m_GameObject: {fileID: 5096872745742225127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -2, y: 2, z: 2}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1073539862}
   m_Father: {fileID: 0}
@@ -535,8 +535,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 801f7d441219b69469431e7b886f8223, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: a2db1e6b2fc9078469c1ff818e80a47c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -564,7 +564,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 2.56, y: 2.56}
     newSize: {x: 6.77, y: 6.36}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -628,8 +628,7 @@ MonoBehaviour:
   speed: 800
   rotationSpeed: 300
   sinkSpeed: 300
-  facingRight: 1
-  deathTimer: 5
+  facingRight: 0
   stance: 0
   whirlpoolRotating: 0
 --- !u!114 &5096872745742225132
@@ -644,7 +643,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32bde2758b72af248bed8b7aa7c4a1c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStamina: 100
-  gainStamina: 10
-  staminaUI: {fileID: 81000116}
+  maxStamina: 10
   stamina: 0
+  staminaUI: {fileID: 81000116}
