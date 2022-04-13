@@ -330,14 +330,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5096872745742225126, guid: b49d528e6719c17419ccae6af3a87b60, type: 3}
-      propertyPath: skid
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 5096872745742225126, guid: b49d528e6719c17419ccae6af3a87b60, type: 3}
-      propertyPath: slide
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 5096872745742225127, guid: b49d528e6719c17419ccae6af3a87b60, type: 3}
       propertyPath: m_Name
       value: Swimmer
