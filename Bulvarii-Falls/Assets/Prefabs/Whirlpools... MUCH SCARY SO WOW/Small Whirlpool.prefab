@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2718717738897997483}
   - component: {fileID: 1200253724}
   m_Layer: 0
-  m_Name: Whirlpool
+  m_Name: Small Whirlpool
   m_TagString: Whirlpool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
