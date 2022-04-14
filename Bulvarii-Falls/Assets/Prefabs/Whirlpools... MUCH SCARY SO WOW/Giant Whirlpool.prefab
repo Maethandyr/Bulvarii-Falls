@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5144449247934894479
+--- !u!1 &3920271217456353762
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5144449247934894477}
-  - component: {fileID: 5144449247934894476}
-  - component: {fileID: 4450404403119361128}
-  - component: {fileID: 5144449247934894483}
-  - component: {fileID: 7124151679057151012}
+  - component: {fileID: 3920271217456353760}
+  - component: {fileID: 3920271217456353761}
+  - component: {fileID: 5530520994118126597}
+  - component: {fileID: 3920271217456353790}
+  - component: {fileID: 1431382202733003849}
   m_Layer: 0
-  m_Name: Medium Whirlpool
+  m_Name: Giant Whirlpool
   m_TagString: Whirlpool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5144449247934894477
+--- !u!4 &3920271217456353760
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5144449247934894479}
+  m_GameObject: {fileID: 3920271217456353762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.1, y: -14.7, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: -85.4, y: -38.4, z: 0}
+  m_LocalScale: {x: 34.09278, y: 30.227043, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5144449247934894476
+--- !u!212 &3920271217456353761
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5144449247934894479}
+  m_GameObject: {fileID: 3920271217456353762}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -85,13 +85,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &4450404403119361128
+--- !u!58 &5530520994118126597
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5144449247934894479}
+  m_GameObject: {fileID: 3920271217456353762}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -101,31 +101,31 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.9599999
---- !u!114 &5144449247934894483
+--- !u!114 &3920271217456353790
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5144449247934894479}
+  m_GameObject: {fileID: 3920271217456353762}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27840666b7ab7d9499172a5ba84df422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pullSpeed: 1
-  rangeDetection: 25
-  escapeDifficulty: 7
-  deathTimer: 3.5
+  rangeDetection: 30
+  escapeDifficulty: 20
+  deathTimer: 0.5
   setOpaque: 0
---- !u!95 &7124151679057151012
+--- !u!95 &1431382202733003849
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5144449247934894479}
+  m_GameObject: {fileID: 3920271217456353762}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 00916d17d68bbd145915fe63c1a00849, type: 2}
