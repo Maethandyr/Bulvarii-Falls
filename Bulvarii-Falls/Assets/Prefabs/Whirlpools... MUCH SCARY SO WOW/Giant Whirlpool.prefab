@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pullSpeed: 1
-  rangeDetection: 20
+  rangeDetection: 40.83
   escapeDifficulty: 20
   deathTimer: 0.5
   setOpaque: 0
@@ -150,7 +150,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ad160d8d36a21284fbe337605720fe03, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.559
+  m_Volume: 0.716
   m_Pitch: 1
   Loop: 1
   Mute: 0

@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/DEMO/DEMO 1.unity
     guid: fef118b0e04a56d4ba2d2ff03af520a4
   - enabled: 1
-    path: Assets/Scenes/Quotes.unity
+    path: Assets/Scenes/DEMO/Quotes.unity
     guid: 662fb4f625f2a5746bf0f53871379f83
   m_configObjects: {}
