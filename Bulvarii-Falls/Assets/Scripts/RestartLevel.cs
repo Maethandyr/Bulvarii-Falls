@@ -41,7 +41,7 @@ public class RestartLevel : MonoBehaviour
     {
         if (isPlayerOnScene && player == null)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(gameOverBuildIndex);
         }
     }
 
