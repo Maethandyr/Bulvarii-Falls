@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pullSpeed: 1
-  rangeDetection: 30
+  rangeDetection: 20
   escapeDifficulty: 20
   deathTimer: 0.5
   setOpaque: 0
