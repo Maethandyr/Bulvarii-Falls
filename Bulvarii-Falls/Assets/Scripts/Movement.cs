@@ -83,7 +83,7 @@ public class Movement : MonoBehaviour
             }
             else
             {
-                restartLevel.RestartCurrentScene();
+                restartLevel.GameOverScene();
             }
         }
     }

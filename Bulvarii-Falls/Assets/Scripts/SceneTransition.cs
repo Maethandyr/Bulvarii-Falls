@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
-    public string sceneName;
+    public int sceneBuildIndex;
     public float timer = 5;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class SceneTransition : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) || timer >= 0)
         {
-            SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene(sceneBuildIndex);
         }
         timer -= Time.deltaTime;
     }
