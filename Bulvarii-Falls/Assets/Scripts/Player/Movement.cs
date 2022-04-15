@@ -20,6 +20,8 @@ public class Movement : MonoBehaviour
     Vector2 movement;
     Vector3 scaleChange;
     private Stamina stamina;
+    private RestartLevel restartLevel;
+    private GameObject gameManager;
 
     private void Awake()
     {
@@ -31,6 +33,8 @@ public class Movement : MonoBehaviour
     {
         stamina = gameObject.GetComponent<Stamina>();
         rb = gameObject.GetComponent<Rigidbody2D>();
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        restartLevel = gameManager.GetComponent<RestartLevel>();
         stance = false;
         whirlpoolRotating = false;
     }
@@ -76,6 +80,10 @@ public class Movement : MonoBehaviour
             if (transform.localScale.x > 0 || transform.localScale.y > 0)
             {
                 transform.localScale += scaleChange * sinkSpeed * Time.deltaTime;
+            }
+            else
+            {
+                restartLevel.GameOverScene();
             }
         }
     }

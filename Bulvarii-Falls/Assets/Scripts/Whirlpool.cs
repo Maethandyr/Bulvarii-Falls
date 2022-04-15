@@ -157,7 +157,7 @@ public class Whirlpool : MonoBehaviour
         }
         else if (maxDeathTimer <= 0 && isDeathTimer)
         {
-            Debug.Log("Whirlpool, oh no. The player is now friend with Whirlpool!");
+            //Debug.Log("Whirlpool, oh no. The player is now friend with Whirlpool!");
             playerMovement.WhirlpoolDeath();
         }
     }
