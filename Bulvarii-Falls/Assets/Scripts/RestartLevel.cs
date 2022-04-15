@@ -7,7 +7,6 @@ public class RestartLevel : MonoBehaviour
 {
     public int gameOverBuildIndex;
     public bool isPlayerOnScene = false;
-    public float timer = 5;
     GameObject player;
     // Start is called before the first frame update
     void Start()
