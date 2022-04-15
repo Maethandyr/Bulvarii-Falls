@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class RestartLevel : MonoBehaviour
 {
-    public int sceneBuildIndex;
     public int gameOverBuildIndex;
     public bool isPlayerOnScene = false;
     public float timer = 5;
