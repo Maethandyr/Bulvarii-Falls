@@ -27,12 +27,14 @@ public class RestartLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetKeyDown("p"))
         {
             Debug.Log("Press P to restart level");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        //PlayerIsGone();
+        */
+        PlayerIsGone();
     }
 
     private void PlayerIsGone()
@@ -41,11 +43,6 @@ public class RestartLevel : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-    }
-
-    public void RestartCurrentScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void GameOverScene()
