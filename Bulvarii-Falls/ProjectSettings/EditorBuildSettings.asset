@@ -9,12 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/DEMO/Menu.unity
+    path: Assets/Scenes/Menu.unity
     guid: 843c2cf9af104de49a9cc22ef454f05d
   - enabled: 1
-    path: Assets/Scenes/DEMO/DEMO 1.unity
+    path: Assets/Scenes/DEMO 1.unity
     guid: fef118b0e04a56d4ba2d2ff03af520a4
   - enabled: 1
-    path: Assets/Scenes/DEMO/Quotes.unity
+    path: Assets/Scenes/Death Quote.unity
     guid: 662fb4f625f2a5746bf0f53871379f83
+  - enabled: 1
+    path: Assets/Scenes/Waterfall.unity
+    guid: d6eb9fc6f25f0d540bc8e443d5bb187b
+  - enabled: 1
+    path: Assets/Scenes/Finale.unity
+    guid: 8fdced24d61787c4eb211c84ee37a156
   m_configObjects: {}
