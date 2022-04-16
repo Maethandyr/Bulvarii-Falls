@@ -626,8 +626,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 900
-  rotationSpeed: 300
-  sinkSpeed: 300
+  rotationSpeed: 250
+  sinkSpeed: 20
   skid: 0.01
   facingRight: 0
   stance: 0
