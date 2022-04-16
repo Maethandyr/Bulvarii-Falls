@@ -162,7 +162,6 @@ public class Whirlpool : MonoBehaviour
             //Debug.Log("Whirlpool, oh no. The player is now friend with Whirlpool!");
             playerMovement.WhirlpoolDeath();
             target.gameObject.GetComponent<Movement>().enabled = false;
-            //target.gameObject.GetComponent<Stamina>().enabled = false; 
             
         }
     }
