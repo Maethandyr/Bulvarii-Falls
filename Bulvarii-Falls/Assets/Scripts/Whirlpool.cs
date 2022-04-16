@@ -10,6 +10,7 @@ public class Whirlpool : MonoBehaviour
     public float deathTimer = 5; //Used in public inspector to set max timer, should not be change in code
     [Range(0f, 1f)]
     public float setOpaque = 0; //Used to set opaque (invisibility) of a sprite
+    public GameObject player;
 
     private float staminaConsumeCount;
     private float maxDeathTimer; //Used as a timer for death, use it as a countdown
@@ -62,6 +63,7 @@ public class Whirlpool : MonoBehaviour
         {
             targetrb.AddForce((m_Center - target.position) * pullSpeed);
             EscapeAttempt();
+            
         }
         else if (isDeathTimer == false)
         {
@@ -159,6 +161,9 @@ public class Whirlpool : MonoBehaviour
         {
             //Debug.Log("Whirlpool, oh no. The player is now friend with Whirlpool!");
             playerMovement.WhirlpoolDeath();
+            target.gameObject.GetComponent<Movement>().enabled = false;
+            //target.gameObject.GetComponent<Stamina>().enabled = false; 
+            
         }
     }
 }

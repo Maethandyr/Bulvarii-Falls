@@ -411,15 +411,15 @@ RectTransform:
   m_GameObject: {fileID: 1989419000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 81000115}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.7, y: 0.7}
+  m_AnchoredPosition: {x: 3.21, y: -0.01}
+  m_SizeDelta: {x: 0.70000005, y: 0.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1989419003
 CanvasRenderer:
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9a8e023b5e66b0d478386a07d1627765, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 343362b1e9fa5bf4998b55ee1239f052, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -471,9 +471,10 @@ GameObject:
   - component: {fileID: 5096872745742225129}
   - component: {fileID: 5096872745742225130}
   - component: {fileID: 5096872745742225131}
-  - component: {fileID: 5096872745742225133}
   - component: {fileID: 5096872745742225126}
   - component: {fileID: 5096872745742225132}
+  - component: {fileID: 1112296412}
+  - component: {fileID: 1112296409}
   m_Layer: 0
   m_Name: Swimmer
   m_TagString: Player
@@ -560,7 +561,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.18}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -571,7 +572,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 2.49, y: 1.86}
   m_EdgeRadius: 0
 --- !u!50 &5096872745742225131
 Rigidbody2D:
@@ -594,25 +595,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!95 &5096872745742225133
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5096872745742225127}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 23b15c485a22f7c4390df470f223f16a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &5096872745742225126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,9 +608,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 900
-  rotationSpeed: 250
-  sinkSpeed: 20
-  skid: 0.01
+  rotationSpeed: 300
+  sinkSpeed: 250
+  skid: 0.0464
   facingRight: 0
   stance: 0
   whirlpoolRotating: 0
@@ -647,3 +629,34 @@ MonoBehaviour:
   maxStamina: 10
   stamina: 0
   staminaUI: {fileID: 81000116}
+--- !u!95 &1112296412
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5096872745742225127}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6cfcabb4931e6c142883d7995b228e62, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1112296409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5096872745742225127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e49c5a741a0114e8b1f68b7a50e9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
