@@ -164,8 +164,8 @@ public class Whirlpool : MonoBehaviour
             //Debug.Log("Whirlpool, oh no. The player is now friend with Whirlpool!");
             isDead = true;
             playerMovement.WhirlpoolDeath();
-            
-            
+            gameObject.GetComponent<Movement>().enabled = false;
+
         }
     }
 }

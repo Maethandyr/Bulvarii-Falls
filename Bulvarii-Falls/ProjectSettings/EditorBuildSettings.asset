@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 843c2cf9af104de49a9cc22ef454f05d
   - enabled: 1
-    path: Assets/Scenes/DEMO 1.unity
+    path: Assets/Scenes/Main Cenote.unity
     guid: fef118b0e04a56d4ba2d2ff03af520a4
   - enabled: 1
     path: Assets/Scenes/Death Quote.unity

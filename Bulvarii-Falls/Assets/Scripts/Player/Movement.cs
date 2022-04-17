@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
     Vector3 scaleChange;
     private Stamina stamina;
     private RestartLevel restartLevel;
-    private GameObject gameManager;
+    private LevelLoader levelLoader;
 
     private void Awake()
     {
@@ -33,10 +33,9 @@ public class Movement : MonoBehaviour
     {
         stamina = gameObject.GetComponent<Stamina>();
         rb = gameObject.GetComponent<Rigidbody2D>();
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
-        restartLevel = gameManager.GetComponent<RestartLevel>();
         stance = false;
         whirlpoolRotating = false;
+        levelLoader = GameObject.FindGameObjectWithTag("GameManager").GetComponent<LevelLoader>();
     }
 
     // Update is called once per frame
@@ -76,6 +75,7 @@ public class Movement : MonoBehaviour
     {
         if (whirlpoolRotating)
         {
+            gameObject.GetComponent<Movement>().enabled = false;
             transform.Rotate(new Vector3(0f, 0f, rotationSpeed) * Time.deltaTime);
             if (transform.localScale.x > 0 || transform.localScale.y > 0)
             {
@@ -83,7 +83,7 @@ public class Movement : MonoBehaviour
             }
             else
             {
-                restartLevel.GameOverScene();
+                levelLoader.DeathQuoteScene();
             }
         }
     }
