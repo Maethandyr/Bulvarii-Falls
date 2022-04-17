@@ -115,10 +115,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pullSpeed: 1
-  rangeDetection: 20
+  rangeDetection: 15
   escapeDifficulty: 5
   deathTimer: 5
   setOpaque: 0
+  player: {fileID: 0}
 --- !u!95 &1200253724
 Animator:
   serializedVersion: 3
@@ -150,7 +151,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ad160d8d36a21284fbe337605720fe03, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.275
+  m_Volume: 0.138
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -159,7 +160,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 6.97
+  MaxDistance: 6.9
   Pan2D: 1
   rolloffMode: 2
   BypassEffects: 0

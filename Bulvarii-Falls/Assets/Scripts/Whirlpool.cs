@@ -25,10 +25,12 @@ public class Whirlpool : MonoBehaviour
     CircleCollider2D m_Collider;
     Vector3 m_Center;
     Vector3 m_Size, m_Min, m_Max;
+    private bool isDead;
 
     // Start is called before the first frame update
     void Start()
     {
+        isDead = false;
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); //Player object must have tag "Player"
         targetrb = target.GetComponent<Rigidbody2D>();
         whirlpoolRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -136,7 +138,7 @@ public class Whirlpool : MonoBehaviour
     public void EscapeAttempt()
     {
         //Escaping is related to the amount of stamina consume
-        if (staminaConsumeCount < escapeDifficulty)
+        if (staminaConsumeCount < escapeDifficulty && isDead == false) 
         {
             if (Input.GetKeyDown("space") && stamina.stamina > 0)
             {
@@ -145,7 +147,7 @@ public class Whirlpool : MonoBehaviour
                 staminaConsumeCount += 1;
             }
         }
-        else if (staminaConsumeCount >= escapeDifficulty)
+        else if (staminaConsumeCount >= escapeDifficulty && isDead == false)
         {
             Debug.Log("I'm Free!");
             isDeathTimer = false;
@@ -160,8 +162,9 @@ public class Whirlpool : MonoBehaviour
         else if (maxDeathTimer <= 0 && isDeathTimer)
         {
             //Debug.Log("Whirlpool, oh no. The player is now friend with Whirlpool!");
+            isDead = true;
             playerMovement.WhirlpoolDeath();
-            target.gameObject.GetComponent<Movement>().enabled = false;
+            
             
         }
     }
