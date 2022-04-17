@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 6051353259431869563}
   m_Layer: 0
   m_Name: LevelLoader
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,8 +164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4374235f6d2de5543b19901eef3a142e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 0}
+  transition: {fileID: 6197241145880560311}
   transitionTime: 1
+  deathQuoteBuiltIndex: 2
+  nextSceneBuiltIndex: 0
+  timer: 5
 --- !u!1 &3580295617540233272
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +253,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3580295617540233272}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0

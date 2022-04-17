@@ -1510,14 +1510,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5096872745742225126, guid: b49d528e6719c17419ccae6af3a87b60, type: 3}
-      propertyPath: sinkSpeed
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5096872745742225126, guid: b49d528e6719c17419ccae6af3a87b60, type: 3}
-      propertyPath: rotationSpeed
-      value: 300
-      objectReference: {fileID: 0}
     - target: {fileID: 5096872745742225127, guid: b49d528e6719c17419ccae6af3a87b60, type: 3}
       propertyPath: m_Name
       value: Swimmer
@@ -7469,17 +7461,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1395260541344425559, guid: 9accceae96020b5438e91bef56a1ac12, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3385661342749142672, guid: 9accceae96020b5438e91bef56a1ac12, type: 3}
       propertyPath: m_Name
       value: LevelLoader
-      objectReference: {fileID: 0}
-    - target: {fileID: 3385661342749142672, guid: 9accceae96020b5438e91bef56a1ac12, type: 3}
-      propertyPath: m_TagString
-      value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 4088754696045608806, guid: 9accceae96020b5438e91bef56a1ac12, type: 3}
       propertyPath: m_RootOrder
@@ -7525,25 +7509,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6051353259431869563, guid: 9accceae96020b5438e91bef56a1ac12, type: 3}
-      propertyPath: transition
-      value: 
-      objectReference: {fileID: 6495191020042739615}
-    - target: {fileID: 6051353259431869563, guid: 9accceae96020b5438e91bef56a1ac12, type: 3}
-      propertyPath: transitionTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6051353259431869563, guid: 9accceae96020b5438e91bef56a1ac12, type: 3}
-      propertyPath: DeathQuoteBuiltIndex
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9accceae96020b5438e91bef56a1ac12, type: 3}
---- !u!95 &6495191020042739615 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6197241145880560311, guid: 9accceae96020b5438e91bef56a1ac12, type: 3}
-  m_PrefabInstance: {fileID: 6495191020042739614}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7124151677295347530
 PrefabInstance:
   m_ObjectHideFlags: 0
