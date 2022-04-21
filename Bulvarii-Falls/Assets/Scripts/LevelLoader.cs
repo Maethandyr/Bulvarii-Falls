@@ -50,13 +50,13 @@ public class LevelLoader : MonoBehaviour
         
         //Right click to Scene Transiton for Testing Purposes
         
-        
+        /*
 
             if (Input.GetMouseButtonDown(1))
         {
             LoadNextLevel();
         }
-        
+        */
 
 
     }
