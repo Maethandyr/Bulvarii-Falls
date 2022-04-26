@@ -26,6 +26,9 @@ public class Whirlpool : MonoBehaviour
     Vector3 m_Center;
     Vector3 m_Size, m_Min, m_Max;
     private bool isDead;
+    public float distance;
+    public float stopDistance;
+    public float MoveSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -73,6 +76,11 @@ public class Whirlpool : MonoBehaviour
         }
 
         //Just find that while loop in update break the game
+    }
+
+    private void FixedUpdate()
+    {
+        FollowPlayer();
     }
 
     public void DetectPlayer()
@@ -168,4 +176,13 @@ public class Whirlpool : MonoBehaviour
 
         }
     }
+    public void FollowPlayer()
+    {
+        //Checking distance to player and stopping distance to player
+        if ((Vector2.Distance(transform.position, target.position) < distance) && (Vector2.Distance(transform.position, target.position) > stopDistance))
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target.position, MoveSpeed * Time.deltaTime);
+        }
+    }
+
 }
