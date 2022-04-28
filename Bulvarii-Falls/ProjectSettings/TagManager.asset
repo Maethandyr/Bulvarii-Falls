@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Whirlpool
   - GameManager
+  - DialogManager
+  - AudioInteract
   layers:
   - Default
   - TransparentFX

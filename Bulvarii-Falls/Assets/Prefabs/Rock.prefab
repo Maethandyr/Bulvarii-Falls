@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7731977040480105973}
   - component: {fileID: 456580607068447192}
   - component: {fileID: 1760422240082590998}
+  - component: {fileID: 806211318}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 237f9b3ed44031d4692bfbc1bf803f0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -107,5 +108,25 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 2.28, y: 2.28}
   m_EdgeRadius: 0
+--- !u!114 &806211318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207926235787551476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f3c751d52dbabf40894412a1388b910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textDisplay: {fileID: 0}
+  sentences:
+  - "Help! I\u2019m not ready to go\u2014someone, please\u2014"
+  - Hello? I hear you! Are you under this tree?
+  - "Someone\u2019s here?! Wait, it\u2019s flooding! Just save yourself\u2013"
+  - "No way! Alley\u2013oop! There, crawl out and follow me! We\u2019ll take shelter
+    from the storm in this cenote."
+  typingSpeed: 0.02
