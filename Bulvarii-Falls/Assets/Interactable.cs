@@ -7,7 +7,6 @@ public class Interactable : MonoBehaviour
 {
     public bool isGamePaused;
     public GameObject thisIsMyText; //Drop specific memory text here OR
-    public TextMeshPro TMP; //here
 
     public PauseMenu pauseMenu;
 
@@ -20,24 +19,25 @@ public class Interactable : MonoBehaviour
         }
     }
   
-
     void GiveMeText() 
-
     {
         Debug.Log("You can talk to rocks now!");
         //TMP.SetActive(true);
+        thisIsMyText.SetActive(true);
     }
+
     void LeaveMeText()
     {
-    //TMP.SetActive(false);
+        //TMP.SetActive(false);
+        thisIsMyText.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D other){
-    if (other.CompareTag("Player") && Input.GetKeyDown("e"))
-    {
-        // Show to player "Press e to continue
-        //Pause();
-        GiveMeText();
-    }
+        if (other.CompareTag("Player") && Input.GetKeyDown("e"))
+        {
+            // Show to player "Press e to continue
+            //Pause();
+            GiveMeText();
+        }
     }
 } 
