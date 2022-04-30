@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3585826007525437886}
   - component: {fileID: -247500590993957857}
   - component: {fileID: -8869126947693580573}
+  - component: {fileID: 964589906}
   m_Layer: 0
   m_Name: Waterfall
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4138322008599768668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 31.3, y: -37.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.4630165, y: 5.134857, z: 1.0589}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 7.5, y: 10.8}
   m_EdgeRadius: 0
 --- !u!95 &-247500590993957857
 Animator:
@@ -140,18 +141,18 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c2f62a7184a753544a7f7ba102e32703, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.323
+  m_audioClip: {fileID: 8300000, guid: 2a024d27421eb744f89d6f6d423bf16b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.228
   m_Pitch: 0.32
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 40
+  MaxDistance: 93.96
   Pan2D: 1
   rolloffMode: 2
   BypassEffects: 0
@@ -186,7 +187,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.398
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -226,3 +227,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &964589906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138322008599768668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11dd3bb8cbdde804ebe5531ab5707e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gainStamina: 10
+  canUpgrade: 1
