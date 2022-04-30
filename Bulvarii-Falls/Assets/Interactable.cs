@@ -7,7 +7,7 @@ public class Interactable : MonoBehaviour
 {
     public TextMeshProUGUI textDisplay;
     public string[] sentences;
-    public float typingSpeed;
+    public float typingSpeed = 0.02f;
 
     private int index;
     private DialogManager dialogManager;
@@ -27,6 +27,10 @@ public class Interactable : MonoBehaviour
             Debug.Log("Hey! You need Dialog Manager or Audio Interact! Look in Prefab!");
         }
         
+        if (textDisplay == null)
+        {
+            Debug.Log("Hey! You need Text Display!, look in Pause Menu for Text Display and drag and drop!");
+        }
     }
 
     void Update ()
