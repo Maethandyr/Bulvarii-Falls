@@ -6,7 +6,6 @@ public class WaterfallInteraction : MonoBehaviour
 {
     public float gainStamina = 10;
     public bool canUpgrade = true;
-    public AudioSource audioSourceWaterfall;
     public AudioSource audioSourceHeartbeat;
 
     private GameObject player;
@@ -24,14 +23,6 @@ public class WaterfallInteraction : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            audioSourceWaterfall.Play();
-        }
-    }
-
     void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player") && Input.GetKey("e") && canUpgrade)
@@ -44,14 +35,6 @@ public class WaterfallInteraction : MonoBehaviour
         {
             staminaUI.RefillEnergy(); // Refill stamina
             audioSourceHeartbeat.Play();
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            audioSourceWaterfall.Stop();
         }
     }
 }
