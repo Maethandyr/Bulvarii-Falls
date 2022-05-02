@@ -6,14 +6,14 @@ public class WaterfallInteraction : MonoBehaviour
 {
     public float gainStamina = 10;
     public bool canUpgrade = true;
+    public AudioSource audioSourceWaterfall;
+    public AudioSource audioSourceHeartbeat;
 
-    private AudioSource audioSource;
     private GameObject player;
     private StaminaUI staminaUI;
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = gameObject.GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player");
         staminaUI = player.GetComponentInChildren<StaminaUI>();
     }
@@ -24,18 +24,34 @@ public class WaterfallInteraction : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            audioSourceWaterfall.Play();
+        }
+    }
+
     void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player") && Input.GetKey("e") && canUpgrade)
         {
             canUpgrade = false;
             staminaUI.GainMaxStamina(gainStamina); // Gain stamina
-            audioSource.Play();
+            audioSourceHeartbeat.Play();
         }
         else if (other.CompareTag("Player") && Input.GetKey("e") && canUpgrade == false)
         {
             staminaUI.RefillEnergy(); // Refill stamina
-            audioSource.Play();
+            audioSourceHeartbeat.Play();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            audioSourceWaterfall.Stop();
         }
     }
 }
