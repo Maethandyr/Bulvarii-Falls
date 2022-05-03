@@ -128,61 +128,73 @@ public class DialogueKusaseachi : MonoBehaviour
             {
                 index = 0;
                 StartCoroutine(Type());
+                isRock1 = false;
             }
             else if (isRock2)
             {
                 index = 1;
                 StartCoroutine(Type());
+                isRock2 = false;
             }
             else if (isRock3)
             {
                 index = 2;
                 StartCoroutine(Type());
+                isRock3 = false;
             }
             else if (isRock4)
             {
                 index = 3;
                 StartCoroutine(Type());
+                isRock4 = false;
             }
             else if (isWood1)
             {
                 index = 4;
                 StartCoroutine(Type());
+                isWood1 = false;
             }
             else if (isWood2)
             {
                 index = 5;
                 StartCoroutine(Type());
+                isWood2 = false;
             }
             else if (isWood3)
             {
                 index = 6;
                 StartCoroutine(Type());
+                isWood3 = false;
             }
             else if (isWood4)
             {
                 index = 7;
                 StartCoroutine(Type());
+                isWood4 = false;
             }
             else if (isFlower1)
             {
                 index = 8;
                 StartCoroutine(Type());
+                isFlower1 = false;
             }
             else if (isFlower2)
             {
                 index = 9;
                 StartCoroutine(Type());
+                isFlower2 = false;
             }
             else if (isFlower3)
             {
                 index = 10;
                 StartCoroutine(Type());
+                isFlower3 = false;
             }
             else if (isFlower4)
             {
                 index = 11;
                 StartCoroutine(Type());
+                isFlower4 = false;
             }
         }
     }
