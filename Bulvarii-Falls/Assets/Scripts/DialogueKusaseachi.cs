@@ -89,6 +89,7 @@ public class DialogueKusaseachi : MonoBehaviour
             isSentenceComplete = false;
             //NextSentence();
             textDisplay.text = ""; // Erase Text
+            dialogManager.isDialogTrigger = false;
         }
     }
     public void NextSentence()
