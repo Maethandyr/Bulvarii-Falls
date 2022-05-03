@@ -56,7 +56,7 @@ public class DialogueKusaseachi : MonoBehaviour
         isFlower3 = false;
         isFlower4 = false;
 
-        index = 13;
+        index = 13; // Making dialogue repeat itself
 
         try
         {
@@ -199,7 +199,7 @@ public class DialogueKusaseachi : MonoBehaviour
                 StartCoroutine(Type());
                 isFlower4 = false;
             }
-            else if (index != 13)
+            else if (index != 13) // Repeat last dialogue
             {
                 StartCoroutine(Type());
             }
