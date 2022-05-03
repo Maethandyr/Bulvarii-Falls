@@ -36,7 +36,7 @@ public class DialogueKusaseachi : MonoBehaviour
     [HideInInspector]
     public bool isFlower4 = false;
 
-    private int index;
+    private int index = 13;
     private bool isSentenceComplete;
     private DialogManager dialogManager;
 
@@ -55,6 +55,8 @@ public class DialogueKusaseachi : MonoBehaviour
         isFlower2 = false;
         isFlower3 = false;
         isFlower4 = false;
+
+        index = 13;
 
         try
         {
@@ -196,6 +198,10 @@ public class DialogueKusaseachi : MonoBehaviour
                 index = 11;
                 StartCoroutine(Type());
                 isFlower4 = false;
+            }
+            else if (index != 13)
+            {
+                StartCoroutine(Type());
             }
         }
     }
