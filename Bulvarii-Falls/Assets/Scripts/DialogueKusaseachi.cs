@@ -39,6 +39,7 @@ public class DialogueKusaseachi : MonoBehaviour
     private int index = 13;
     private bool isSentenceComplete;
     private DialogManager dialogManager;
+    private AudioSource audioInteraction;
 
     // Start is called before the first frame update
     void Start()
@@ -61,10 +62,11 @@ public class DialogueKusaseachi : MonoBehaviour
         try
         {
             dialogManager = GameObject.FindGameObjectWithTag("DialogManager").GetComponent<DialogManager>();
+            audioInteraction = gameObject.GetComponent<AudioSource>();
         }
         catch
         {
-            Debug.Log("Hey! You need Dialog Manager! Look in Prefab!");
+            Debug.Log(gameObject + " Hey! You need Dialog Manager or AudioSource! Look in Prefab!");
         }
         if (textDisplay == null)
         {
@@ -132,77 +134,102 @@ public class DialogueKusaseachi : MonoBehaviour
                 index = 0;
                 StartCoroutine(Type());
                 isRock1 = false;
+                KusaseachiAudio();
             }
             else if (isRock2)
             {
                 index = 1;
                 StartCoroutine(Type());
                 isRock2 = false;
+                KusaseachiAudio();
             }
             else if (isRock3)
             {
                 index = 2;
                 StartCoroutine(Type());
                 isRock3 = false;
+                KusaseachiAudio();
             }
             else if (isRock4)
             {
                 index = 3;
                 StartCoroutine(Type());
                 isRock4 = false;
+                KusaseachiAudio();
             }
             else if (isWood1)
             {
                 index = 4;
                 StartCoroutine(Type());
                 isWood1 = false;
+                KusaseachiAudio();
             }
             else if (isWood2)
             {
                 index = 5;
                 StartCoroutine(Type());
                 isWood2 = false;
+                KusaseachiAudio();
             }
             else if (isWood3)
             {
                 index = 6;
                 StartCoroutine(Type());
                 isWood3 = false;
+                KusaseachiAudio();
             }
             else if (isWood4)
             {
                 index = 7;
                 StartCoroutine(Type());
                 isWood4 = false;
+                KusaseachiAudio();
             }
             else if (isFlower1)
             {
                 index = 8;
                 StartCoroutine(Type());
                 isFlower1 = false;
+                KusaseachiAudio();
             }
             else if (isFlower2)
             {
                 index = 9;
                 StartCoroutine(Type());
                 isFlower2 = false;
+                KusaseachiAudio();
             }
             else if (isFlower3)
             {
                 index = 10;
                 StartCoroutine(Type());
                 isFlower3 = false;
+                KusaseachiAudio();
             }
             else if (isFlower4)
             {
                 index = 11;
                 StartCoroutine(Type());
                 isFlower4 = false;
+                KusaseachiAudio();
             }
             else if (index != 13) // Repeat last dialogue
             {
                 StartCoroutine(Type());
+                KusaseachiAudio();
             }
+        }
+    }
+    void KusaseachiAudio()
+    {
+        if (audioInteraction.isPlaying)
+        {
+            audioInteraction.Stop();
+            audioInteraction.Play();
+        }
+        else
+        {
+            audioInteraction.Play();
         }
     }
 }
